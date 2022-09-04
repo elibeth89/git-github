@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    color:blueviolet;
+    min-height: 10vh;
+       
+}
+
+footer{
+    
+    padding: 20px;
+   
+}
+
+.intro{
+    display: flex;
+    background-color:rgb(218, 154, 212);
+    height: 40px;
+    justify-content: center;
+    font-size: 40px;
+}
+.menu {
+    display: flex;
+    list-style-type: none; 
+    background-color: rgb(129, 249, 229);
+    height: 40px;
+    justify-content:end;
+}    
+
+.menu__item {
+    display:inline-block;
+    margin-right: 10px;
+    margin left: 10 px;
+
+}
+
+
+
+.Contenedor {
+    display:grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "categorias inicio promociones"
+    "preguntas  inicio contacto";
+    gap: 10px;
+    animation-name: tienda; 
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+
+}
+
+.inicio{
+    grid-area: inicio;
+    background-image: radial-gradient(circle, rgb(148, 227, 227) , rgb(215, 140, 194));
+    
+}
+
+/* animaciones por fotogramas */
+@keyframes  tienda {
+    0% {
+        background-color: darkorchid;
+    }
+
+    25% {
+
+        background-color: rgb(230, 116, 173);
+    }
+
+    75% {
+        background-color: rgb(234, 195, 214);
+    }
+
+    100% {
+        background-color: whitesmoke;
+
+    }
+
+}
+
+.inicio__foto {
+    width: 500px;
+    height: 300px;
+   
+
+}
+
+.categorias {
+    grid-area: categorias;
+    background-image: linear-gradient(rgb(215, 140, 194),rgb(205, 70, 160)) ;
+}
+
+.categorias__foto{
+    width: 200px;
+    height: 100px;
+}
+
+.promociones{
+    grid-area: promociones;
+    background-image: linear-gradient(rgb(205, 70, 160), rgb(215, 140, 194) ) ;
+}
+
+.promociones__foto {
+    width: 200px;
+    height: 100px;
+}
+
+.preguntas{
+    grid-area: preguntas;
+    background-image: linear-gradient(rgb(205, 70, 160), rgb(215, 140, 194) ) ;
+}
+
+.preguntas__foto {
+    width: 200px;
+    height: 100px;
+}
+
+.Contacto{
+    grid-area: contacto;
+    background-image: linear-gradient(rgb(215, 140, 194),rgb(205, 70, 160)) ;
+}
+
+.Contacto__foto {
+    width: 200px;
+    height: 100px;
+
+}
+
+.Contenedor > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CATEGORÍAS */
+
+
+.categoriaspages {
+    display:grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "bombachas tangas  bralets"
+    "corpiños  bodies cremas";
+    gap: 25px;
+
+}
+
+.categoriaspages > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bombachas{
+    grid-area: bombachas;
+    background-color: rgb(189, 235, 235);
+    transform: skew(5deg);
+
+}
+
+.bombachas__foto {
+    width: 200px;
+    height: 100px;
+
+}
+
+.tangas {
+    grid-area: tangas;
+    background-color: rgb(232, 191, 218);
+}
+
+.tangas__foto{
+    width: 200px;
+    height: 100px;
+}
+
+.bralets{
+    grid-area: bralets;
+    background-color: rgb(189, 235, 235);
+    transform: skew(-5deg);
+}
+
+.bralets__foto {
+    width: 200px;
+    height: 100px;
+}
+
+.corpiños{
+    grid-area: corpiños;
+    background-color: rgb(232, 191, 218);
+    transform: skew(-5deg);
+}
+
+.corpiños__foto {
+    width: 200px;
+    height: 100px;
+}
+
+.bodies{
+    grid-area: bodies;
+    background-color:rgb(189, 235, 235);
+}
+
+.bodies__foto {
+    width: 200px;
+    height: 100px;
+
+}
+
+
+.cremas{
+    grid-area: cremas;
+    background-color:rgb(232, 191, 218);
+    transform: skew(5deg);
+}
+
+.cremas__foto {
+    width: 200px;
+    height: 100px;
+
+}
+
+section
+{
+    display:grid;
+}
+
+
+
+
+/* punto de quiebre */
+
+@media (max-width: 768px) {
+
+
+.intro {
+    
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    font-size: 11px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ /* index */
+ .Contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6 1fr);
+    grid-template-areas: 
+    "inicio"
+    "inicio"
+    "categorias"
+    "promociones"
+    "preguntas"
+    "contacto"
+    ;
+    gap: 10px;
+
+    }
+
+    .inicio__foto {
+        width: 180px;
+        height: 90px;
+
+}
+   .categorias__foto{
+        width: 150px;
+        height: 75px;
+}
+
+.promociones__foto{
+    width: 150px;
+    height: 75px;
+}
+
+.preguntas__foto{
+    width: 150px;
+    height: 75px;
+}
+
+.Contacto__foto{
+    width: 150px;
+    height: 75px;
+}
+
+
+
+.categoriaspages {
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "bombachas tangas"
+    "bralets corpiños"
+    "bodies cremas";
+    gap: 5px;
+
+}
+
+
+.bombachas__foto {
+    width: 150px;
+    height: 75px;
+
+}
+
+
+.tangas__foto{
+    width: 150px;
+    height: 75px;
+}
+
+
+.bralets__foto {
+    width: 150px;
+    height: 75px;
+}
+
+
+
+.corpiños__foto {
+    width: 150px;
+    height: 75px;
+}
+
+
+.bodies__foto {
+    width: 150px;
+    height: 75px;
+
+}
+
+
+.cremas__foto {
+    width: 120px;
+    height: 60px;
+
+}
+}
+
+
+
+
+
+@media (max-width: 480px) {
+ 
+   .intro {
+    display: none;
+    border: 0;
+    margin: 0;
+   }
+
+   nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 7px;
+    align-items: center;
+   }
+
+   /* index */
+    .Contenedor {
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "inicio"
+    "categorias"
+    "promociones"
+    "preguntas"
+    "contacto"
+    ;
+    gap: 10px;
+
+    }
+
+    .inicio__foto {
+        width: 180px;
+        height: 90px;
+
+}
+   .categorias__foto{
+        width: 180px;
+        height: 90px;
+}
+
+.promociones__foto{
+    width: 180px;
+    height: 90px;
+}
+
+.preguntas__foto{
+    width: 180px;
+    height: 90px;
+}
+
+.Contacto__foto{
+    width: 180px;
+    height: 90px;
+}
+ /* categorias */
+
+
+ .categoriaspages {
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "bombachas tangas"
+    "bralets corpiños"
+    "bodies cremas";
+    gap: 5px;
+
+}
+
+
+.bombachas__foto {
+    width: 150px;
+    height: 75px;
+
+}
+
+
+.tangas__foto{
+    width: 150px;
+    height: 75px;
+}
+
+
+.bralets__foto {
+    width: 150px;
+    height: 75px;
+}
+
+
+
+.corpiños__foto {
+    width: 150px;
+    height: 75px;
+}
+
+
+.bodies__foto {
+    width: 150px;
+    height: 75px;
+
+}
+
+
+.cremas__foto {
+    width: 120px;
+    height: 60px;
+
+}
+
+}
