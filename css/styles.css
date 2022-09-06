@@ -243,6 +243,68 @@ section
 
 
 /* punto de quiebre */
+@media (max-width: 1023px) {
+
+    
+.intro {
+    
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    font-size: 15px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Contenedor {
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: 
+    "inicio inicio"
+    "categorias promociones"
+    "preguntas contacto"
+    ;
+    gap: 10px;
+
+    }
+
+    .inicio__foto {
+        width: 180px;
+        height: 90px;
+
+}
+   .categorias__foto{
+        width: 120px;
+        height: 60px;
+}
+
+.promociones__foto{
+    width: 120px;
+    height: 60px;
+}
+
+.preguntas__foto{
+    width: 120px;
+    height: 60px;
+}
+
+.Contacto__foto{
+    width: 120px;
+    height: 60px;
+} 
+  
+
+
+
+}
+
 
 @media (max-width: 768px) {
 
@@ -254,7 +316,7 @@ section
     height: 50px;
 }
 
-nav ul {
+nav ul { 
     display: flex;
     font-size: 11px;
     width: 100%;
@@ -262,7 +324,7 @@ nav ul {
     align-items: center;
     justify-content: center;
 
-}
+} 
 
  /* index */
  .Contenedor {
